@@ -1,0 +1,38 @@
+<!doctype html>
+{%load blogapp_tags%}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>{% block title %} {% endblock %}</title>
+    <style media="screen">
+      body{
+        background:url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+        background-size:cover;
+        background-repeat:no repeat;
+        color:white;
+      }
+    </style>
+  </head>
+  <body>
+    {% block content %}
+
+  {% endblock %}
+  <div class="sidebar">
+    <h2>Kiran blog</h2>
+    <p>Here you can see ur total post :{% total_post %}</p>
+    <h2>Latest post:</h2>{% show_latest_post %}
+    <h2>Most Commented Post:</h2>
+    <ul>
+
+      <li>{{post.title}}</li>
+
+    </ul>
+  </div>
+  </body>
+</html>
